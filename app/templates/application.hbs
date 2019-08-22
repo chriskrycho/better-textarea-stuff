@@ -1,3 +1,12 @@
 <h2 id="title">Welcome to Ember</h2>
 
-{{outlet}}
+value: {{this.value}}<br>
+
+<EditTextArea
+  @valueChanged={{this.countdownYo}}
+  @textMaxLength={{20}}
+  @value={{this.value}}
+/>
+
+{{if this.show this.countdown}}<br>
+{{if this.reached "OUT OF ROOM YO"}}

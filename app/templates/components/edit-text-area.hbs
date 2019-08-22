@@ -1,0 +1,15 @@
+<TextCountdown
+  @value={{@value}}
+  @valueChanged={{@valueChanged}}
+  @textMaxLength={{@textMaxLength}}
+  @beginCountdownAt={{20}}
+  @countdownLimit={{-1}}
+  as |updateCountdown|
+>
+  <Textarea
+    ...attributes
+    class="pe-form-field__textarea"
+    @value={{@value}}
+    {{on "keyup" (fn updateCountdown @value)}}
+  />
+</TextCountdown>
